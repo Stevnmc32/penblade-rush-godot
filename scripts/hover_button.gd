@@ -4,7 +4,7 @@ var is_disabled = false
 signal button_pressed
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Text.text=get_meta("text");
+
 	return;
 
 
