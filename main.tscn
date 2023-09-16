@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbc6s46t5s7jc"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_33q5i"]
+[ext_resource type="PackedScene" uid="uid://b8t6xa4yop6kx" path="res://hover_button.tscn" id="1_o7dq3"]
+[ext_resource type="Script" path="res://button_group.gd" id="3_of881"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_33q5i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Fight" parent="." instance=ExtResource("1_o7dq3")]
+position = Vector2(-577, 0)
+metadata/text = "Fight"
+
+[node name="Artist_Attacks" type="Node2D" parent="."]
+visible = false
+position = Vector2(-476, 0)
+script = ExtResource("3_of881")
+
+[node name="Penblade" parent="Artist_Attacks" instance=ExtResource("1_o7dq3")]
+position = Vector2(0, -42)
+metadata/text = "Penblade"
+
+[node name="Skills" parent="Artist_Attacks" instance=ExtResource("1_o7dq3")]
+position = Vector2(0, -14)
+metadata/text = "Skills"
+
+[node name="Items" parent="Artist_Attacks" instance=ExtResource("1_o7dq3")]
+position = Vector2(0, 14)
+metadata/text = "Items"
+
+[node name="Cancel" parent="Artist_Attacks" instance=ExtResource("1_o7dq3")]
+position = Vector2(0, 42)
+metadata/text = "Cancel"
+
+[connection signal="button_pressed" from="Fight" to="." method="_on_start_button_pressed"]
+[connection signal="button_pressed" from="Artist_Attacks/Cancel" to="." method="_on_cancel_button_pressed"]

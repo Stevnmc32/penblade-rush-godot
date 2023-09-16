@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8t6xa4yop6kx"]
+
+[ext_resource type="Script" path="res://hover_button.gd" id="1_ylml5"]
+[ext_resource type="Texture2D" uid="uid://cgllvuwkgmi3w" path="res://icon.svg" id="2_xym5u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_olkjp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_galg2"]
+
+[sub_resource type="Theme" id="Theme_63fva"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_olkjp")
+Button/styles/focus = SubResource("StyleBoxEmpty_olkjp")
+Button/styles/hover = SubResource("StyleBoxEmpty_olkjp")
+Button/styles/normal = SubResource("StyleBoxEmpty_olkjp")
+Button/styles/pressed = SubResource("StyleBoxEmpty_galg2")
+
+[node name="hover_button" type="Node2D"]
+script = ExtResource("1_ylml5")
+metadata/text = ""
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 1167.0
+offset_bottom = 20.0
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_63fva")
+flat = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(133, 5.68434e-14)
+scale = Vector2(0.195313, 0.195313)
+texture = ExtResource("2_xym5u")
+
+[node name="Text" type="RichTextLabel" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 12.0
+grow_vertical = 2
+mouse_filter = 2
+text = "insert text"
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_2_pressed"]
