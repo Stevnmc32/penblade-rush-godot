@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqahag113tn7g"]
+
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="1_akla0"]
+[ext_resource type="Shader" path="res://shaders/arrow.gdshader" id="2_y7j54"]
+[ext_resource type="Texture2D" uid="uid://fdycoqndofk" path="res://assets/arrows/arrow_down.png" id="3_ymtfo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_as8og"]
+shader = ExtResource("2_y7j54")
+shader_parameter/color = Vector4(1, 1, 1, 1)
+shader_parameter/width = 3.0
+shader_parameter/pattern = 1
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[node name="arrow" type="Node2D"]
+script = ExtResource("1_akla0")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_as8og")
+texture = ExtResource("3_ymtfo")

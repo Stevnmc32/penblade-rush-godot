@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8lnssn6l62pn"
-path="res://.godot/imported/AplzImageAttack3.png-3861da085d4c2cd9d0f325d8a4daf541.ctex"
+uid="uid://ciw84ivpo2a04"
+path="res://.godot/imported/PenBladeRushBG.jpg-7fe32b5bdbe6c55e6a6a521ec5e659da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/the_artist/AplzImageAttack3.png"
-dest_files=["res://.godot/imported/AplzImageAttack3.png-3861da085d4c2cd9d0f325d8a4daf541.ctex"]
+source_file="res://assets/PenBladeRushBG.jpg"
+dest_files=["res://.godot/imported/PenBladeRushBG.jpg-7fe32b5bdbe6c55e6a6a521ec5e659da.ctex"]
 
 [params]
 

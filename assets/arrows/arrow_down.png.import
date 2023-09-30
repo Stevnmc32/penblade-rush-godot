@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bly4jy3ycbfsn"
-path="res://.godot/imported/AplzImageAttack4.png-a3331fdc01cec79481f345eec1e126a1.ctex"
+uid="uid://fdycoqndofk"
+path="res://.godot/imported/arrow_down.png-94bf2067e846cd73bc599b211cddd781.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/the_artist/AplzImageAttack4.png"
-dest_files=["res://.godot/imported/AplzImageAttack4.png-a3331fdc01cec79481f345eec1e126a1.ctex"]
+source_file="res://assets/arrows/arrow_down.png"
+dest_files=["res://.godot/imported/arrow_down.png-94bf2067e846cd73bc599b211cddd781.ctex"]
 
 [params]
 

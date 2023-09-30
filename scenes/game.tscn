@@ -1,19 +1,54 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbc6s46t5s7jc"]
+[gd_scene load_steps=20 format=3 uid="uid://dj01h0emx8i73"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_54umc"]
 [ext_resource type="Script" path="res://scripts/button_group.gd" id="2_c75mj"]
+[ext_resource type="Texture2D" uid="uid://ciw84ivpo2a04" path="res://assets/PenBladeRushBG.jpg" id="2_g1wyx"]
 [ext_resource type="PackedScene" uid="uid://c6hj6gf5uimwo" path="res://scenes/hover_button.tscn" id="3_emc6y"]
 [ext_resource type="Texture2D" uid="uid://cb7mx3433p5t" path="res://assets/concept.png" id="4_m2sjq"]
 [ext_resource type="Texture2D" uid="uid://bu0nhvi6pwftg" path="res://assets/menu.png" id="5_djm6w"]
-[ext_resource type="Texture2D" uid="uid://ciw84ivpo2a04" path="res://assets/the_artist/PenBladeRushBG.jpg" id="5_yv7rr"]
 [ext_resource type="Texture2D" uid="uid://0gvva8pybsi8" path="res://assets/the_artist_headshot.png" id="6_jx2ic"]
 [ext_resource type="Texture2D" uid="uid://bwuulqvkevcle" path="res://assets/bars.png" id="7_clybc"]
+[ext_resource type="Texture2D" uid="uid://h14ndflpkh70" path="res://assets/GeoMinion.png" id="8_urpxv"]
 [ext_resource type="Texture2D" uid="uid://bhw23jyfpoef" path="res://assets/the_artist/AplzImageNoPen.png" id="9_20rfy"]
+[ext_resource type="Texture2D" uid="uid://cc1pqhc5a6dts" path="res://assets/the_artist/attack/artist_attack_1.png" id="9_f5vns"]
 [ext_resource type="Texture2D" uid="uid://umis7sxqrin6" path="res://assets/the_artist/PenBlade.png" id="10_cnpga"]
-[ext_resource type="Texture2D" uid="uid://h14ndflpkh70" path="res://assets/the_artist/GeoMinion.png" id="11_v67t8"]
+[ext_resource type="Texture2D" uid="uid://dtug1bnstu0gg" path="res://assets/the_artist/attack/artist_attack_2.png" id="10_w0j8e"]
+[ext_resource type="Texture2D" uid="uid://dpo17bpcdxqk7" path="res://assets/the_artist/attack/artist_attack_3.png" id="11_m8mkl"]
+[ext_resource type="Texture2D" uid="uid://djfvse7d52e3k" path="res://assets/the_artist/attack/artist_attack_4.png" id="12_e4ti7"]
+[ext_resource type="Texture2D" uid="uid://c6msdfl8rt66j" path="res://assets/the_artist/attack/artist_attack_5.png" id="13_u13l1"]
+[ext_resource type="Texture2D" uid="uid://c1cerffeah8fa" path="res://assets/the_artist/attack/artist_attack_6.png" id="14_op4dd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uyi53"]
 blend_mode = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gr7pp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_f5vns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w0j8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m8mkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e4ti7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u13l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_op4dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_op4dd")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 20.0
+}]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_54umc")
@@ -23,9 +58,8 @@ script = ExtResource("1_54umc")
 [node name="Static_Sprites" type="Node2D" parent="."]
 
 [node name="PenBladeRushBg" type="Sprite2D" parent="Static_Sprites"]
-position = Vector2(8, 50)
-scale = Vector2(1.52038, 1.52038)
-texture = ExtResource("5_yv7rr")
+scale = Vector2(1.44038, 1.44038)
+texture = ExtResource("2_g1wyx")
 
 [node name="Concept" type="Sprite2D" parent="Static_Sprites"]
 visible = false
@@ -57,16 +91,23 @@ texture = ExtResource("10_cnpga")
 [node name="GeoMinion" type="Sprite2D" parent="Static_Sprites"]
 position = Vector2(416, 188)
 scale = Vector2(0.524847, 0.524847)
-texture = ExtResource("11_v67t8")
+texture = ExtResource("8_urpxv")
 
-[node name="Artist_Attacks" type="Node2D" parent="."]
-position = Vector2(-493, -36)
-script = ExtResource("2_c75mj")
+[node name="Artist_Anim" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(38, 75)
+scale = Vector2(1.12, 1.12)
+sprite_frames = SubResource("SpriteFrames_gr7pp")
+animation = &"attack"
 
-[node name="Menu" type="Sprite2D" parent="Artist_Attacks"]
-position = Vector2(64, 90)
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(-429, 54)
 scale = Vector2(0.497059, 0.497059)
 texture = ExtResource("5_djm6w")
+
+[node name="Artist_Attacks" type="Node2D" parent="."]
+position = Vector2(-491, -36)
+script = ExtResource("2_c75mj")
 
 [node name="Attack" parent="Artist_Attacks" instance=ExtResource("3_emc6y")]
 position = Vector2(0, 36)
@@ -79,3 +120,9 @@ position = Vector2(0, 143)
 
 [node name="Item" parent="Artist_Attacks" instance=ExtResource("3_emc6y")]
 position = Vector2(0, 201)
+
+[node name="Arrows" type="Node2D" parent="."]
+position = Vector2(278, -2)
+
+[connection signal="animation_finished" from="Artist_Anim" to="." method="_on_artist_anim_animation_finished"]
+[connection signal="button_pressed" from="Artist_Attacks/Attack" to="." method="_on_attack_button_pressed"]

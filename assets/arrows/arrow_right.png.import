@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciw84ivpo2a04"
-path="res://.godot/imported/PenBladeRushBG.jpg-b24ceb9c6375cd43452adedaaf2406a8.ctex"
+uid="uid://dxr7tii34mg74"
+path="res://.godot/imported/arrow_right.png-de2b9cfe24d4c87dcc63d880e103e3f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/the_artist/PenBladeRushBG.jpg"
-dest_files=["res://.godot/imported/PenBladeRushBG.jpg-b24ceb9c6375cd43452adedaaf2406a8.ctex"]
+source_file="res://assets/arrows/arrow_right.png"
+dest_files=["res://.godot/imported/arrow_right.png-de2b9cfe24d4c87dcc63d880e103e3f9.ctex"]
 
 [params]
 

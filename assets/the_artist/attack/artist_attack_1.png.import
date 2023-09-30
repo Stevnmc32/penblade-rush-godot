@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h14ndflpkh70"
-path="res://.godot/imported/GeoMinion.png-7071e111b8926948a4256b28564776ff.ctex"
+uid="uid://cc1pqhc5a6dts"
+path="res://.godot/imported/artist_attack_1.png-0f18c7acb7cddb71271c58bbf19835b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/the_artist/GeoMinion.png"
-dest_files=["res://.godot/imported/GeoMinion.png-7071e111b8926948a4256b28564776ff.ctex"]
+source_file="res://assets/the_artist/attack/artist_attack_1.png"
+dest_files=["res://.godot/imported/artist_attack_1.png-0f18c7acb7cddb71271c58bbf19835b2.ctex"]
 
 [params]
 
